@@ -7,6 +7,24 @@ public class Main {
     {
         System.out.println("Hello OOP");
 
+    Book firstBook = new Book();
+
+    firstBook.title = "Dune";
+    firstBook.author = "David";
+    firstBook.pageCount = 412;
+
+    firstBook.displayDetails();
+
+        System.out.println("\n");
+
+        Book secondBook = new Book();
+        secondBook.title = "Star Trek";
+        secondBook.author = "Adam";
+        secondBook.pageCount = 630;
+        secondBook.available = true;
+
+        secondBook.displayDetails();
+
 
     }
 }
