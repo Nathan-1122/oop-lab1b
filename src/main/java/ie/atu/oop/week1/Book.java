@@ -6,14 +6,6 @@ public class Book {
     private int pageCount;
     private BookStatus status;
 
-
-public enum BookStatus
-    {
-    AVAILABLE,
-    ON_LOAN
-    }
-
-
     public Book(String title, String author, int pageCount)
     {
         if(title==null||title.isBlank())
@@ -66,4 +58,8 @@ public enum BookStatus
         status=BookStatus.AVAILABLE;
     }
     }
-}
+
+
+
+
+    }
