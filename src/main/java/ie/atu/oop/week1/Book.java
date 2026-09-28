@@ -35,6 +35,7 @@ public enum BookStatus
         this.author = author;
         this.pageCount = pageCount;
         this.status = BookStatus.AVAILABLE;
+
     }
 
     public String getTitle() {
@@ -56,5 +57,13 @@ public enum BookStatus
         throw new IllegalStateException("Book is already on LOAN");
     }
     status=BookStatus.ON_LOAN;
+    }
+    public void returnBook(){
+    if(status==BookStatus.AVAILABLE){
+        throw new IllegalStateException("Book is already AVAILABLE");
+    }
+    if(status==BookStatus.ON_LOAN){
+        status=BookStatus.AVAILABLE;
+    }
     }
 }

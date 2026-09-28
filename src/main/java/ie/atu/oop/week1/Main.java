@@ -4,10 +4,11 @@ package ie.atu.oop.week1;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Book book = new Book("Dune","Frank Herbert",412);
+        Book book = new Book("Dune", "Frank Herbert", 412);
         book.borrowBook();
+        book.returnBook();
         try {
-            book.borrowBook();
+            book.returnBook();
         } catch (IllegalStateException ex) {
             System.out.println(ex.getMessage());
         }
