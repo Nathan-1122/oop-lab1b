@@ -18,6 +18,7 @@ public class Main {
         } catch (IllegalArgumentException ex) {
             System.out.println(ex.getMessage());
         }
+        System.out.println(first.getStatus());
     }
 }
 
