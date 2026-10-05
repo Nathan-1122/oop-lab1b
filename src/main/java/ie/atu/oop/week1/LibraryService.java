@@ -41,4 +41,27 @@ public class LibraryService {
     public List<Book> getAllBooks() {
         return new ArrayList<>(books);
     }
+
+    public Book findBookByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                return book;
+            }
+        }
+
+        return null;
+    }
+    public boolean removeBook(String title) {
+        Book book = findBookByTitle(title);
+        if (book == null) {
+            return false;
+        }
+        else {
+            books.remove(book);
+            return true;
+        }
+    }
+
+
 }
+
